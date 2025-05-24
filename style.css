@@ -1,0 +1,345 @@
+/* Reset Básico y Fuentes */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    background-color: #2E1A2B; /* Morado oscuro/profundo, base para los rosas */
+    color: #FCE4EC; /* Rosa muy pálido para texto general */
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #4A235A; /* Morado un poco más claro que el body */
+    color: #fff;
+    padding-top: 30px;
+    min-height: 80px;
+    border-bottom: #E91E63 3px solid; /* Rosa fucsia/brillante para el borde */
+}
+
+header #logo {
+    float: left;
+    margin-bottom: 10px;
+}
+
+header #logo h1 {
+    font-size: 2.5em;
+    color: #F06292; /* Rosa brillante medio */
+    letter-spacing: 2px;
+}
+header #logo p {
+    font-size: 0.9em;
+    color: #F8BBD0; /* Rosa pastel claro */
+}
+
+header nav {
+    float: right;
+    margin-top: 25px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header nav a {
+    color: #FCE4EC; /* Rosa muy pálido */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #E91E63; /* Rosa fucsia/brillante */
+}
+
+/* Hero Section */
+#hero {
+    background: #4A235A url('https://via.placeholder.com/1500x600?text=Fondo+Abstracto+Rosado') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative; 
+}
+#hero::before { /* Overlay oscuro sutil */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 35, 90, 0.7); /* Morado del header con opacidad */
+}
+
+#hero .container {
+    position: relative; 
+    z-index: 1;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #FFFFFF; /* Blanco para máximo contraste en el hero */
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FCE4EC; /* Rosa pálido */
+}
+
+.cta-button {
+    display: inline-block;
+    background: #E91E63; /* Rosa fucsia/brillante */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid #E91E63;
+}
+
+.cta-button:hover {
+    background: #C2185B; /* Rosa fucsia más oscuro */
+    border-color: #C2185B;
+    transform: translateY(-2px);
+}
+
+/* Secciones Generales */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #5D3A5B; /* Borde morado sutil entre secciones */
+}
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #F06292; /* Rosa brillante medio */
+}
+
+/* Sobre Mí */
+#sobre-mi .sobre-mi-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+#sobre-mi .profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #C2185B; /* Borde rosa oscuro */
+    flex-shrink: 0;
+}
+
+#sobre-mi .sobre-mi-content div p {
+    margin-bottom: 15px;
+}
+
+#sobre-mi h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #EC407A; /* Otro tono de rosa brillante */
+}
+
+#sobre-mi ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+#sobre-mi ul li {
+    margin-bottom: 5px;
+}
+
+
+/* Proyectos */
+.proyectos-grid, .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.proyecto-card, .blog-post {
+    background: #4A235A; /* Morado como el header */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover, .blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4); /* Sombra rosa fucsia al hacer hover */
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.proyecto-card h3, .blog-post h3 {
+    color: #EC407A; /* Rosa brillante */
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.proyecto-card p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+.proyecto-card p strong {
+    color: #F8BBD0; /* Rosa pastel claro para destacar */
+}
+
+/* Blog */
+.blog-post .post-meta {
+    font-size: 0.8em;
+    color: #F8BBD0; /* Rosa pastel claro */
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #E91E63; /* Rosa fucsia */
+    text-decoration: none;
+    font-weight: bold;
+}
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Testimonios */
+#testimonios {
+    background-color: #3E1F3B; /* Morado un poco más oscuro para variar */
+}
+.testimonio {
+    background: #4A235A; /* Morado de las tarjetas */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #E91E63; /* Borde lateral rosa fucsia */
+    border-radius: 5px;
+}
+.testimonio blockquote {
+    font-style: italic;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.testimonio cite {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: #F8BBD0; /* Rosa pastel claro */
+}
+
+
+/* Contacto */
+#contacto {
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.social-links a {
+    color: #EC407A; /* Rosa brillante */
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #E91E63; /* Rosa fucsia más intenso */
+}
+
+#contacto p a {
+    color: #EC407A; /* Rosa brillante */
+    text-decoration: none;
+}
+#contacto p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #C2185B; /* Rosa fucsia oscuro para el footer */
+    color: #FCE4EC; /* Texto rosa muy pálido */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px; 
+}
+
+/* Responsive (Básico) */
+@media (max-width: 768px) {
+    header #logo, header nav {
+        float: none;
+        text-align: center;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    header nav ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+    #hero p {
+        font-size: 1em;
+    }
+
+    #sobre-mi .sobre-mi-content {
+        flex-direction: column;
+        align-items: center; 
+    }
+    #sobre-mi .profile-pic {
+        margin-bottom: 20px;
+    }
+    #sobre-mi .sobre-mi-content div {
+        text-align: center; 
+    }
+    #sobre-mi ul {
+        display: inline-block; 
+        text-align: left;
+    }
+
+
+    .proyectos-grid, .blog-grid {
+        grid-template-columns: 1fr; 
+    }
+}
